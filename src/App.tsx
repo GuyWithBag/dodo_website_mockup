@@ -9,14 +9,10 @@ import {
   Star,
   ChevronRight,
   Zap,
-  TrendingUp,
-  PlusCircle,
   CheckCircle2,
-  BookOpen,
   Users,
   Banknote,
   Map as MapIcon,
-  Filter,
   Bell,
   UserCircle,
   X,
@@ -30,7 +26,6 @@ import {
   Share2,
   AtSign,
   Camera,
-  Mail,
 } from "lucide-react";
 
 // --- Types & Mock Data ---
@@ -788,7 +783,7 @@ function NavItem({
       <div
         className={`transition-transform ${isActive ? "scale-110" : "scale-100"}`}
       >
-        {React.cloneElement(icon as React.ReactElement, {
+        {React.cloneElement(icon as React.ReactElement<Record<string, unknown>>, {
           className: "w-6 h-6",
           strokeWidth: isActive ? 2.5 : 2,
         })}
